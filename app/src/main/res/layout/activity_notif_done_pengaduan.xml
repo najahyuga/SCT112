@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotifDonePengaduanActivity">
+
+    <ImageView
+        android:id="@+id/imageViewDasarNotifDonePengaduan"
+        android:layout_width="425dp"
+        android:layout_height="790dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.508"
+        app:srcCompat="@drawable/back_ground_tampilan_awal" />
+
+    <View
+        android:id="@+id/viewNotif"
+        android:layout_width="349dp"
+        android:layout_height="300dp"
+        android:background="@drawable/custom_kotak_form"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewDasarNotifDonePengaduan"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewDasarNotifDonePengaduan"
+        app:layout_constraintStart_toStartOf="@+id/imageViewDasarNotifDonePengaduan"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/viewNotif"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/viewNotif"
+        app:layout_constraintTop_toTopOf="@+id/viewNotif"
+        app:srcCompat="@drawable/ic_notifications" />
+
+    <TextView
+        android:id="@+id/textNotifDone"
+        android:layout_width="273dp"
+        android:layout_height="129dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Terimakasih telah melakukan pelaporan kejadian, untuk proses kejadian akan kami tangani dan unit terdekat segera kami kirimkan"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/viewNotif"
+        app:layout_constraintStart_toStartOf="@+id/viewNotif"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/buttonBackHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/bluebutton"
+        android:lineSpacingExtra="0sp"
+        android:onClick="SwipeHome"
+        android:text="Home"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/viewNotif"
+        app:layout_constraintEnd_toEndOf="@+id/viewNotif"
+        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintStart_toStartOf="@+id/viewNotif"
+        app:layout_constraintTop_toBottomOf="@+id/textNotifDone"
+        app:layout_constraintVertical_bias="0.545" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfilActivity">
+
+    <ImageView
+        android:id="@+id/imageViewDasarProfil"
+        android:layout_width="425dp"
+        android:layout_height="790dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.508"
+        app:srcCompat="@drawable/back_ground_tampilan_awal" />
+
+    <View
+        android:id="@+id/viewNotif"
+        android:layout_width="349dp"
+        android:layout_height="300dp"
+        android:background="@drawable/custom_kotak_form"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewDasarProfil"
+        app:layout_constraintStart_toStartOf="@+id/imageViewDasarProfil"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/viewNotif"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/viewNotif"
+        app:layout_constraintTop_toTopOf="@+id/viewNotif"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Profile"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/buttonProfile"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/white"
+        android:onClick="SwipeProfile"
+        android:shadowColor="@color/menudashboard1"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Ubah Profile"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/viewNotif"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/viewNotif"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/buttonPassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/white"
+        android:onClick="SwipePassword"
+        android:shadowColor="@color/menudashboard1"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Ubah Password"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/viewNotif"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/viewNotif"
+        app:layout_constraintTop_toBottomOf="@+id/buttonProfile" />
+
+    <Button
+        android:id="@+id/buttonBackHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/bluebutton"
+        android:lineSpacingExtra="0sp"
+        android:onClick="SwipeHome"
+        android:text="Home"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewNotif"
+        app:layout_constraintEnd_toEndOf="@+id/viewNotif"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/viewNotif"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

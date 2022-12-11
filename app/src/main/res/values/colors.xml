@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="redbutton">#FF0505</color>
+    <color name="bluebutton">#258DFF</color>
+    <color name="menudashboard">#618FFC</color>
+    <color name="menudashboard1">#959595</color>
+    <color name="menudashboardTengah">#C4959595</color>
+    <color name="menu">#FF8787</color>
+    <color name="formPengaduan">#D9D8D8D8</color>
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SCT112</string>
+    <string name="nama">Nama</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="konfirmpassword">Konfirmasi Password</string>
+    <string name="namapelapor">Nama Pelapor</string>
+    <string name="laporankejadian">Laporan Kejadian</string>
+    <string name="lokasikejadian">Lokasi Kejadian</string>
+    <string name="deskripsikejadian">Deskripsi Kejadian</string>
+    <string name="upimage">Up Image</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="nohp">No. Handphone</string>
+    <string name="passwordlama">Password Lama</string>
+    <string name="passwordbaru">Password Baru</string>
+    <string name="konfirmpasswordbaru">Konfirmasi Password Baru</string>
+</resources>

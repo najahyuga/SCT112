@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+    <ImageView
+        android:id="@+id/imageViewDashboard"
+        android:layout_width="516dp"
+        android:layout_height="813dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/_741_1_1" />
+
+    <View
+        android:id="@+id/viewKotakAtasAbu"
+        android:layout_width="369dp"
+        android:layout_height="108dp"
+        android:background="@drawable/custom_header_menu1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewKotakAtasBiru"
+        android:layout_width="369dp"
+        android:layout_height="98dp"
+        android:background="@drawable/custom_header_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/viewKotakAtasAbu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageViewAkun"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:onClick="SwipeProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewKotakAtasAbu"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
+
+    <TextView
+        android:id="@+id/textViewAkunUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="43dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Hai, User!"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewNotif"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toEndOf="@+id/imageViewAkun"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewNotif"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="40dp"
+        android:onClick="SwipeNotif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewKotakAtasAbu"
+        app:srcCompat="@drawable/ic_notifications" />
+
+    <View
+        android:id="@+id/viewKotakTengahMenu"
+        android:layout_width="349dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/custom_kotak_dashboard_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewKotakAtasAbu" />
+
+    <ImageButton
+        android:id="@+id/imageButtonMenuDashboard"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_menu"
+        android:onClick="SwipeLaporan"
+        android:src="@drawable/ic_create"
+        app:layout_constraintStart_toStartOf="@+id/viewKotakTengahMenu"
+        app:layout_constraintTop_toTopOf="@+id/viewKotakTengahMenu" />
+
+    <TextView
+        android:id="@+id/textViewLapor"
+        android:layout_width="44dp"
+        android:layout_height="26dp"
+        android:fontFamily="sans-serif"
+        android:text="Laporan Kejadian"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonMenuDashboard"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonMenuDashboard"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonMenuDashboard" />
+
+    <ImageButton
+        android:id="@+id/imageButtonMenuDashboard2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_menu"
+        android:onClick="SwipeApkDevelop"
+        android:src="@drawable/ic_info"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonMenuDashboard"
+        app:layout_constraintTop_toTopOf="@+id/viewKotakTengahMenu" />
+
+    <TextView
+        android:id="@+id/textViewInfo"
+        android:layout_width="46dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif"
+        android:text="Informasi"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonMenuDashboard2"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonMenuDashboard2"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonMenuDashboard2" />
+
+    <ImageButton
+        android:id="@+id/imageButtonMenuDashboard3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_menu"
+        android:onClick="SwipeApkDevelop"
+        android:src="@drawable/ic_info"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonMenuDashboard2"
+        app:layout_constraintTop_toTopOf="@+id/viewKotakTengahMenu" />
+
+    <TextView
+        android:id="@+id/textViewInfo2"
+        android:layout_width="46dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif"
+        android:text="Informasi"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonMenuDashboard3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonMenuDashboard3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonMenuDashboard3" />
+
+    <ImageButton
+        android:id="@+id/imageButtonMenuDashboard4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_menu"
+        android:onClick="SwipeLogOut"
+        android:src="@drawable/ic_exit_to_app"
+        app:layout_constraintEnd_toEndOf="@+id/viewKotakTengahMenu"
+        app:layout_constraintHorizontal_bias="0.379"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonMenuDashboard3"
+        app:layout_constraintTop_toTopOf="@+id/viewKotakTengahMenu" />
+
+    <TextView
+        android:id="@+id/textViewKeluar"
+        android:layout_width="46dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="sans-serif"
+        android:text="Keluar"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonMenuDashboard4"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonMenuDashboard4"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonMenuDashboard4" />
+
+    <View
+        android:id="@+id/viewKotakTengahInfo"
+        android:layout_width="349dp"
+        android:layout_height="300dp"
+        android:background="@drawable/custom_kotak_dashboard_menu"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPanikDashboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewKotakTengahMenu" />
+
+    <TextView
+        android:id="@+id/textView4TengahInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Informasi Kejadian Hari Ini"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/viewKotakTengahInfo"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="@+id/viewKotakTengahInfo"
+        app:layout_constraintTop_toTopOf="@+id/viewKotakTengahInfo" />
+
+    <ImageButton
+        android:id="@+id/imageButtonInfoTengah"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_menu"
+        android:onClick="SwipeApkDevelop"
+        app:layout_constraintStart_toStartOf="@+id/viewKotakTengahInfo"
+        app:layout_constraintTop_toBottomOf="@+id/textView4TengahInfo"
+        app:srcCompat="@drawable/ic_info" />
+
+    <TextView
+        android:id="@+id/textViewTengahInfo1"
+        android:layout_width="121dp"
+        android:layout_height="41dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Kejadian hari ini sebagai Berikut..."
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonInfoTengah"
+        app:layout_constraintEnd_toEndOf="@+id/viewKotakTengahInfo"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonInfoTengah"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonInfoTengah"
+        app:layout_constraintVertical_bias="0.473" />
+
+
+    <ImageButton
+        android:id="@+id/imageButtonInfoTengah2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/custom_menu"
+        android:onClick="SwipeApkDevelop"
+        app:layout_constraintStart_toStartOf="@+id/viewKotakTengahInfo"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonInfoTengah"
+        app:srcCompat="@drawable/ic_info" />
+
+    <TextView
+        android:id="@+id/textViewTengahInfo"
+        android:layout_width="121dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="56dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Kejadian hari ini sebagai Berikut..."
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonInfoTengah2"
+        app:layout_constraintEnd_toEndOf="@+id/viewKotakTengahInfo"
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonInfoTengah2"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonInfoTengah2"
+        app:layout_constraintVertical_bias="0.421" />
+
+    <Button
+        android:id="@+id/buttonPanikDashboard2"
+        android:layout_width="349dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/redbutton"
+        android:lineSpacingExtra="0sp"
+        android:onClick="SwipeButtonPanic"
+        android:text="DARURAT Tekan Tombol Ini"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewKotakBawahAbu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewKotakTengahInfo" />
+
+    <View
+        android:id="@+id/viewKotakBawahAbu"
+        android:layout_width="369dp"
+        android:layout_height="80dp"
+        android:background="@drawable/custom_footer_menu1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/viewKotakBawahBiru"
+        android:layout_width="369dp"
+        android:layout_height="70dp"
+        android:background="@drawable/custom_footer_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewKotakBawahAbu"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="48dp"
+        android:background="@drawable/ic_home"
+        android:onClick="SwipeDashboard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewKotakBawahBiru"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/TextViewFooterHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Home"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton3"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+
+    <ImageButton
+        android:id="@+id/imageButtonFooterMenu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_create"
+        android:onClick="SwipeLaporan"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="@+id/viewKotakBawahBiru" />
+
+    <TextView
+        android:id="@+id/TextViewFooterLapor"
+        android:layout_width="46dp"
+        android:layout_height="25dp"
+        android:fontFamily="sans-serif"
+        android:text="Lapor Kejadian"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonFooterMenu"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonFooterMenu"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonFooterMenu" />
+
+    <ImageButton
+        android:id="@+id/imageButtonFooterPengaduan"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_assignment_turned"
+        android:onClick="SwipeApkDevelop"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonFooterMenu"
+        app:layout_constraintTop_toTopOf="@+id/viewKotakBawahBiru" />
+
+    <TextView
+        android:id="@+id/TextViewFooterRiwayatLapor"
+        android:layout_width="43dp"
+        android:layout_height="24dp"
+        android:fontFamily="sans-serif"
+        android:text="Status Laporan"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonFooterPengaduan"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonFooterPengaduan"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonFooterPengaduan" />
+
+    <ImageButton
+        android:id="@+id/imageButtonFooterProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_person_footer"
+        android:onClick="SwipeProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonFooterPengaduan"
+        app:layout_constraintTop_toTopOf="@+id/viewKotakBawahBiru" />
+
+    <TextView
+        android:id="@+id/textViewFooterProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Profil"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonFooterProfile"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonFooterProfile"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonFooterProfile" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

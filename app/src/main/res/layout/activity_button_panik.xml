@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ButtonPanikActivity">
+
+    <View
+        android:id="@+id/backgroundDasar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="#7F8487"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/nomorDarurat"
+        android:layout_width="296dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Nomor Darurat 112"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backgroundDasar" />
+
+    <TextView
+        android:id="@+id/memanggil"
+        android:layout_width="154dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Memanggil..."
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/nomorDarurat"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nomorDarurat"
+        app:layout_constraintTop_toBottomOf="@+id/nomorDarurat" />
+
+    <ImageButton
+        android:id="@+id/imageButtonVolume"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="#7E8386"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonPhone"
+        app:layout_constraintStart_toStartOf="@+id/nomorDarurat"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonPhone"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_volume_up" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPhone"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/custom_button_panic_call"
+        android:onClick="SwipeHome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonVolume"
+        app:layout_constraintTop_toBottomOf="@+id/memanggil"
+        app:layout_constraintVertical_bias="0.797"
+        app:srcCompat="@drawable/ic_local_phone" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDialPad"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="#7E8386"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonPhone"
+        app:layout_constraintEnd_toEndOf="@+id/nomorDarurat"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonPhone"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonPhone"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_dialpad" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

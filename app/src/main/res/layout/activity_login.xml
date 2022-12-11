@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dasar_login"
+    tools:context=".LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/imageViewLogoMedis"
+        android:layout_width="124dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_medis" />
+
+    <TextView
+        android:id="@+id/textViewWelcomePahlawan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ranga"
+        android:shadowColor="#404040"
+        android:shadowDx="5"
+        android:shadowDy="1"
+        android:shadowRadius="20"
+        android:text="Selamat Datang Pahlawan"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogoMedis" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/kotakBiru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/kotak_biru"
+        android:paddingVertical="40dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textViewLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="LOGIN"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/kotakBiru" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/EmailRegist"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_email_icon"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewLogin" />
+
+        <EditText
+            android:id="@+id/PasswordRegist"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_lock_icon"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/EmailRegist" />
+
+        <TextView
+            android:id="@+id/textForgotPasword"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Forgot Password?"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/PasswordRegist" />
+
+        <Button
+            android:id="@+id/buttonMasuk"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/bluebutton"
+            android:onClick="masukDashboard"
+            android:text="Masuk"
+            app:cornerRadius="70dp"
+            app:layout_constraintTop_toBottomOf="@id/textForgotPasword" />
+
+        <TextView
+            android:id="@+id/textOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Or"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonMasuk" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sosial_media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textOr">
+
+            <ImageView
+                android:id="@+id/imageViewGoogle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintBaseline_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/google1" />
+
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:id="@+id/imageViewFb"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintStart_toEndOf="@id/imageViewGoogle"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewGoogle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageViewGoogle"
+                app:srcCompat="@drawable/facebook__1_" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/textSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:textAlignment="center"
+            android:onClick="SignUp"
+            android:text="Tidak Punya Akun? Buat Disini"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/sosial_media" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormPengaduanActivity">
+
+    <ImageView
+        android:id="@+id/imageViewDasarFormPeng"
+        android:layout_width="425dp"
+        android:layout_height="790dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.508"
+        app:srcCompat="@drawable/back_ground_tampilan_awal" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="349dp"
+        android:layout_height="600dp"
+        android:background="@drawable/custom_kotak_form"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewDasarFormPeng"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:srcCompat="@drawable/report" />
+
+    <TextView
+        android:id="@+id/textViewForm"
+        android:layout_width="172dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Formulir Laporan Kejadian Laka Lantas"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/NamaPelapor"
+        android:layout_width="318dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_person"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="@string/namapelapor"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <EditText
+        android:id="@+id/LaporanKejadian"
+        android:layout_width="318dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_laporan_form"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="@string/laporankejadian"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NamaPelapor" />
+
+    <EditText
+        android:id="@+id/LokasiKejadian"
+        android:layout_width="318dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_location_form"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="@string/lokasikejadian"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LaporanKejadian" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:onClick="SwipeMaps"
+        app:layout_constraintStart_toStartOf="@+id/LokasiKejadian"
+        app:layout_constraintTop_toBottomOf="@+id/LokasiKejadian"
+        app:srcCompat="@drawable/ic_add_location_focused" />
+
+    <TextView
+        android:id="@+id/pilihpeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/roboto_bold"
+        android:onClick="SwipeMaps"
+        android:text="Pilih Lewat Peta"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+
+    <EditText
+        android:id="@+id/DeskripsiKejadian"
+        android:layout_width="318dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_location_form"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/deskripsikejadian"
+        android:inputType="textMultiLine"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+
+    <EditText
+        android:id="@+id/UpImage"
+        android:layout_width="318dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/custom_up_image"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="@string/upimage"
+        android:inputType="textUri"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DeskripsiKejadian" />
+
+    <Button
+        android:id="@+id/buttonFormCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/redbutton"
+        android:lineSpacingExtra="0sp"
+        android:onClick="SwipeHome"
+        android:text="Cancel"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UpImage" />
+
+    <Button
+        android:id="@+id/buttonFormSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/bluebutton"
+        android:lineSpacingExtra="0sp"
+        android:onClick="SwipeSubmit"
+        android:text="Kirim"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonFormCancel"
+        app:layout_constraintTop_toBottomOf="@+id/UpImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
