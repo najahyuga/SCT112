@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "774428304385",
-    "project_id": "sct112-63257",
-    "storage_bucket": "sct112-63257.appspot.com"
+    "project_number": "216428132059",
+    "firebase_url": "https://sct112-53df5-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "sct112-53df5",
+    "storage_bucket": "sct112-53df5.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:774428304385:android:63f48901d7e4f20421cc00",
+        "mobilesdk_app_id": "1:216428132059:android:e2552b4f8419c11d6afefe",
         "android_client_info": {
           "package_name": "com.example.sct112"
         }
       },
       "oauth_client": [
         {
-          "client_id": "774428304385-940fares06ojk9mcac2jrlcp1s907h6f.apps.googleusercontent.com",
+          "client_id": "216428132059-tq68td2653qsi305hsb01vce2d2ffr5i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD9Wb6-O9oS34_DirnEC210BstuqtkoE6w"
+          "current_key": "AIzaSyDvrYeQ_uXq3TKRm9iezpAgfd9M6yrViug"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "774428304385-940fares06ojk9mcac2jrlcp1s907h6f.apps.googleusercontent.com",
+              "client_id": "216428132059-tq68td2653qsi305hsb01vce2d2ffr5i.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

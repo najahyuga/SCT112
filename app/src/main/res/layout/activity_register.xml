@@ -124,39 +124,51 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmailRegist" />
 
-    <EditText
-        android:id="@+id/KonfirmPasswordRegist"
-        android:layout_width="315dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/custom_input"
-        android:drawableStart="@drawable/custom_lock_icon"
-        android:drawablePadding="12dp"
-        android:ems="10"
-        android:hint="@string/konfirmpassword"
-        android:inputType="textPassword"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PasswordRegist" />
+<!--    <EditText-->
+<!--        android:id="@+id/KonfirmPasswordRegist"-->
+<!--        android:layout_width="315dp"-->
+<!--        android:layout_height="56dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@drawable/custom_input"-->
+<!--        android:drawableStart="@drawable/custom_lock_icon"-->
+<!--        android:drawablePadding="12dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="@string/konfirmpassword"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:paddingStart="12dp"-->
+<!--        android:paddingEnd="12dp"-->
+<!--        android:textColor="@android:color/darker_gray"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.52"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/PasswordRegist" />-->
 
-    <ImageButton
-        android:id="@+id/imageButton"
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton"-->
+<!--        android:layout_width="315dp"-->
+<!--        android:layout_height="31dp"-->
+<!--        android:layout_marginTop="28dp"-->
+<!--        android:background="@drawable/custom_submit_button"-->
+<!--        android:drawablePadding="12dp"-->
+<!--        android:onClick="signUp"-->
+<!--        android:paddingStart="12dp"-->
+<!--        android:paddingEnd="12dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/PasswordRegist"-->
+<!--        app:srcCompat="@drawable/custom_arrow_right_icon" />-->
+    <Button
+        android:id="@+id/registerUser"
         android:layout_width="315dp"
-        android:layout_height="31dp"
+        android:layout_height="50dp"
         android:layout_marginTop="28dp"
-        android:background="@drawable/custom_submit_button"
-        android:drawablePadding="12dp"
-        android:onClick="signUp"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/KonfirmPasswordRegist"
-        app:srcCompat="@drawable/custom_arrow_right_icon" />
+        android:text="Register"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordRegist"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
