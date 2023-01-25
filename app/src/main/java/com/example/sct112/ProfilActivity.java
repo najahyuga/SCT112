@@ -25,7 +25,7 @@ public class ProfilActivity extends AppCompatActivity {
     }
 
     public void SwipePassword(View view) {
-        Intent intent = new Intent(this, ChangePasswordActivity.class);
+        Intent intent = new Intent(this, ForgotPassword.class);
         startActivity(intent);
     }
 }
