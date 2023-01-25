@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back_ground_tampilan_awal"
     tools:context=".DashboardActivity">
 
     <ImageView
@@ -12,11 +13,10 @@
         android:layout_height="813dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/_741_1_1" />
+        />
 
     <View
         android:id="@+id/viewKotakAtasAbu"
@@ -199,7 +199,6 @@
         android:layout_width="349dp"
         android:layout_height="300dp"
         android:background="@drawable/custom_kotak_dashboard_menu"
-        app:layout_constraintBottom_toTopOf="@+id/buttonPanikDashboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewKotakTengahMenu" />
