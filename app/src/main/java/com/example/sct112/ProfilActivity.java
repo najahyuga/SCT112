@@ -47,6 +47,7 @@ public class ProfilActivity extends AppCompatActivity {
     }
 
     private boolean btnDelete() {
+        // firebase auth delete
         user.delete()
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -59,6 +60,7 @@ public class ProfilActivity extends AppCompatActivity {
                     }
                 });
 
+        // firebase realtime delete
         DatabaseReference deleteReference = FirebaseDatabase.getInstance()
                 .getReference("Users")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
