@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -12,8 +14,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,7 +31,10 @@ public class MenuProfilActivity extends AppCompatActivity implements View.OnClic
      * initialization to display the registered name and email */
     private FirebaseUser user;
     private DatabaseReference reference;
+    private UserProfileChangeRequest profileUpdates;
     private String userId;
+
+    private static final String TAG = "ProfilActivity";
 
     private EditText namaMenuProfil, noHpProfil, emailMenuProfil;
     private Button cancelProfil, submitProfil;
@@ -108,7 +116,7 @@ public class MenuProfilActivity extends AppCompatActivity implements View.OnClic
 
     private void updateProfil() {
         String name = namaMenuProfil.getText().toString().trim();
-        String noHP = noHpProfil.getText().toString().trim();
+//        String noHP = noHpProfil.getText().toString().trim();
         String email = emailMenuProfil.getText().toString().trim();
 
         if (name.isEmpty()){
@@ -117,15 +125,15 @@ public class MenuProfilActivity extends AppCompatActivity implements View.OnClic
             return;
         }
 
-        if (noHP.isEmpty()){
-            noHpProfil.setError("No HP Harus di isi");
-            noHpProfil.requestFocus();
-            return;
-        }else if (noHP.length()<14){
-            noHpProfil.setError("No HP tidak boleh lebih dari 14 digit");
-            noHpProfil.requestFocus();
-            return;
-        }
+//        if (noHP.isEmpty()){
+//            noHpProfil.setError("No HP Harus di isi");
+//            noHpProfil.requestFocus();
+//            return;
+//        }else if (noHP.length()<14){
+//            noHpProfil.setError("No HP tidak boleh lebih dari 14 digit");
+//            noHpProfil.requestFocus();
+//            return;
+//        }
 
         if (email.isEmpty()){
             emailMenuProfil.setError("Email harus di isi !");
@@ -138,6 +146,34 @@ public class MenuProfilActivity extends AppCompatActivity implements View.OnClic
             emailMenuProfil.requestFocus();
             return;
         }
+
+        user = FirebaseAuth.getInstance().getCurrentUser();
+
+        profileUpdates = new UserProfileChangeRequest.Builder()
+                .setDisplayName("Users")
+                .build();
+
+        user.updateProfile(profileUpdates)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()){
+                            Log.d(TAG, "User Profile Update");
+                        }else{
+                            Log.d(TAG, "User Profile Update GAGAL");
+                        }
+                    }
+                });
+
+        user.updateEmail(email)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()){
+                            Log.d(TAG, "User Email Update");
+                        }
+                    }
+                });
     }
 
     public void SwipeHome(View view) {
